@@ -44556,7 +44556,11 @@ var Recipes = function Recipes(_ref) {
         _react2.default.createElement(
           _reactBootstrap.Col,
           { md: 2, sm: 2, xs: 2 },
-          _react2.default.createElement(
+          recipe.thumbnail === "" ? _react2.default.createElement(
+            'a',
+            { href: recipe.href, target: '_blank' },
+            _react2.default.createElement('img', { src: '/images/no-image.png', width: '107' })
+          ) : _react2.default.createElement(
             'a',
             { href: recipe.href, target: '_blank' },
             _react2.default.createElement('img', { src: recipe.thumbnail, width: '107' })
@@ -44566,8 +44570,8 @@ var Recipes = function Recipes(_ref) {
           _reactBootstrap.Col,
           { md: 4, sm: 4, xs: 4 },
           _react2.default.createElement(
-            'p',
-            { className: 'recipe-title' },
+            'a',
+            { href: recipe.href, target: '_blank', className: 'recipe-title' },
             recipe.title
           ),
           _react2.default.createElement(
